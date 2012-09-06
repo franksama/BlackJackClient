@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="#006442" android:layout_height="match_parent" android:layout_width="match_parent">
+    <TextView android:id="@+id/gameTitle" android:gravity="center_horizontal" android:text="@string/blackjack" android:layout_height="wrap_content" style="@style/CodeFont" android:layout_width="match_parent" android:layout_marginBottom="8sp"></TextView>
+    <EditText android:id="@+id/editText1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/buttonLayout" android:inputType="number" android:visibility="invisible"></EditText>
+    <LinearLayout android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/gameLayout" android:layout_below="@+id/gameTitle" android:layout_above="@+id/buttonLayout" android:orientation="vertical" android:padding="8dip">
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/dealerNameLayout" android:layout_marginBottom="5dp" android:background="#666666" android:paddingLeft="5dp">
+            <TextView style="@style/PlayerName" android:id="@+id/dealerName" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/dealer" android:phoneNumber="true" android:layout_marginBottom="5dp" android:layout_toRightOf="@+id/dealerCircle"></TextView>
+            <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentTop="true" android:src="@drawable/circle" android:paddingTop="5dp" android:paddingRight="5dp" android:visibility="invisible" android:id="@+id/dealerCircle"></ImageView>
+            <TextView android:layout_alignParentTop="true" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_toRightOf="@+id/dealerName" android:id="@+id/dealerOutcome" android:layout_marginLeft="5dp" android:padding="2dp" style="@style/OutcomeWin" android:enabled="true"></TextView>
+        </RelativeLayout>
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/dealerLayout" android:layout_marginBottom="8dp">
+            <RelativeLayout android:layout_height="wrap_content" android:id="@+id/dealerLayoutOne" android:layout_width="wrap_content">
+             
+            </RelativeLayout>
+            <RelativeLayout android:layout_height="wrap_content" android:id="@+id/dealerLayoutTwo" android:layout_width="wrap_content"></RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/playerOneNameLayout" android:layout_marginBottom="5dp" android:background="#000000" android:paddingLeft="5dp">
+				<ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentTop="true" android:src="@drawable/circle" android:paddingTop="5dp" android:paddingRight="5dp" android:visibility="invisible" android:id="@+id/playerOneCircle"></ImageView>
+				       
+            	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/playerOneName" android:text="@string/player1" style="@style/PlayerName" android:layout_marginBottom="5dp" android:layout_toRightOf="@+id/playerOneCircle"></TextView>
+        		
+        		<TextView android:layout_alignParentTop="true" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_toRightOf="@+id/playerOneName" android:id="@+id/playerOneOutcome" android:layout_marginLeft="5dp" android:padding="2dp" style="@style/OutcomeWin" android:enabled="true"></TextView>
+        		
+ 				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/playerOneMoney" style="@style/Money" android:paddingLeft="5dp" android:paddingTop="2dp" android:layout_toRightOf="@+id/playerOneOutcome" android:layout_alignParentRight="true" android:gravity="right" android:paddingRight="5dp"></TextView>       	
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:id="@+id/playerOneLayout" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+            <RelativeLayout android:layout_height="wrap_content" android:id="@+id/playerOneLayoutOne" android:layout_width="wrap_content">
+            	
+            </RelativeLayout>
+            <RelativeLayout android:layout_height="wrap_content" android:id="@+id/playerOneLayoutTwo" android:layout_width="wrap_content" android:layout_marginLeft="50dp"></RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/playerTwoNameLayout" android:layout_marginBottom="5dp" android:background="#000000" android:paddingLeft="5dp">
+        	<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/playerTwoName" android:text="@string/player2" style="@style/PlayerName" android:layout_marginBottom="5dp" android:layout_toRightOf="@+id/playerTwoCircle"></TextView>
+			<ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentTop="true" android:src="@drawable/circle" android:paddingTop="5dp" android:paddingRight="5dp" android:visibility="invisible" android:id="@+id/playerTwoCircle"></ImageView>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/playerTwoMoney" style="@style/Money" android:paddingLeft="5dp" android:paddingTop="2dp" android:layout_toRightOf="@+id/playerTwoOutcome" android:layout_alignParentRight="true" android:gravity="right" android:fitsSystemWindows="false" android:paddingRight="5dp"></TextView>
+			<TextView android:layout_alignParentTop="true" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/playerTwoOutcome" android:layout_marginLeft="5dp" android:padding="2dp" style="@style/OutcomeWin" android:layout_toRightOf="@+id/playerTwoName"></TextView>        
+        </RelativeLayout>
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/playerTwoLayout" android:layout_marginBottom="8dp">
+        	<RelativeLayout android:layout_height="wrap_content" android:id="@+id/playerTwoLayoutOne" android:layout_width="wrap_content">
+            	
+            </RelativeLayout>
+            <RelativeLayout android:layout_height="wrap_content" android:id="@+id/playerTwoLayoutTwo" android:layout_width="wrap_content"></RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/playerThreeNameLayout" android:layout_marginBottom="5dp" android:background="#000000" android:paddingLeft="5dp">
+        	<TextView android:id="@+id/playerThreeName" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/player3" style="@style/PlayerName" android:enabled="false" android:layout_marginBottom="5dp" android:layout_toRightOf="@+id/playerThreeCircle"></TextView>
+        	<ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentTop="true" android:src="@drawable/circle" android:paddingTop="5dp" android:paddingRight="5dp" android:visibility="invisible" android:id="@+id/playerThreeCircle"></ImageView>
+        	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/playerThreeMoney" style="@style/Money" android:paddingLeft="5dp" android:paddingTop="2dp" android:layout_toRightOf="@+id/playerThreeOutcome" android:layout_alignParentRight="true" android:gravity="right" android:paddingRight="5dp"></TextView>
+        	<TextView android:layout_alignParentTop="true" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/playerThreeOutcome" android:layout_marginLeft="5dp" android:padding="2dp" style="@style/OutcomeLose" android:layout_toRightOf="@+id/playerThreeName"></TextView>
+       	</RelativeLayout>
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/playerThreeLayout" android:layout_marginBottom="8dp">
+            <RelativeLayout android:layout_height="wrap_content" android:id="@+id/playerThreeLayoutOne" android:layout_width="wrap_content">
+            	
+            </RelativeLayout>
+            <RelativeLayout android:layout_height="wrap_content" android:id="@+id/playerThreeLayoutTwo" android:layout_width="wrap_content"></RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/playerFourNameLayout" android:layout_marginBottom="5dp" android:background="#000000" android:paddingLeft="5dp">
+        	<TextView android:autoText="false" style="@style/PlayerName" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/player4" android:id="@+id/playerFourName" android:layout_marginBottom="5dp" android:layout_toRightOf="@+id/playerFourCircle"></TextView>
+        	<ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentTop="true" android:src="@drawable/circle" android:paddingTop="5dp" android:paddingRight="5dp" android:visibility="invisible" android:id="@+id/playerFourCircle"></ImageView>
+        	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/playerFourMoney" style="@style/Money" android:paddingLeft="5dp" android:paddingTop="2dp" android:layout_toRightOf="@+id/playerFourOutcome" android:layout_alignParentRight="true" android:gravity="right" android:paddingRight="5dp"></TextView>
+        	<TextView android:layout_alignParentTop="true" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/playerFourOutcome" android:layout_marginLeft="5dp" android:padding="2dp" style="@style/OutcomeLose" android:layout_toRightOf="@+id/playerFourName"></TextView>
+        </RelativeLayout>
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/playerFourLayout">
+            <RelativeLayout android:layout_height="wrap_content" android:id="@+id/playerFourLayoutOne" android:layout_width="wrap_content">
+            	
+           	</RelativeLayout>
+           	<RelativeLayout android:layout_height="wrap_content" android:id="@+id/playerFourLayoutTwo" android:layout_width="wrap_content"></RelativeLayout>
+        </RelativeLayout>        
+    </LinearLayout>
+	<LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:id="@+id/buttonLayout">
+		<Button android:onClick="join" android:layout_width="wrap_content" android:id="@+id/join" android:layout_height="wrap_content" android:text="@string/join"></Button>
+		<Button android:onClick="sit" android:layout_width="wrap_content" android:id="@+id/sit" android:layout_height="wrap_content" android:text="@string/sit" android:visibility="gone"></Button>		
+		<Spinner android:id="@+id/spinner" android:layout_height="wrap_content" android:prompt="@string/bet_prompt" android:layout_width="wrap_content" android:visibility="gone"/>
+		<Button android:onClick="bet" android:layout_width="wrap_content" android:id="@+id/bet" android:layout_height="wrap_content" android:text="@string/deal" android:visibility="gone"></Button>
+		<Button android:onClick="hit" android:id="@+id/hit" android:layout_width="wrap_content" android:text="@string/hit" android:layout_height="wrap_content" android:visibility="gone"></Button>
+		<Button android:onClick="stand" android:id="@+id/stand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stand" android:visibility="gone"></Button>
+		<Button android:onClick="leave" android:id="@+id/leave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/leave" android:visibility="gone"></Button>
+		<!-- 
+		<Button android:onClick="double" android:id="@+id/doubleBtn" android:layout_width="wrap_content" android:text="@string/doubleBtnText" android:layout_height="wrap_content"></Button>
+		<Button android:onClick="insurance" android:id="@+id/insurance" android:layout_width="wrap_content" android:text="@string/insurance" android:layout_height="wrap_content"></Button>
+		<Button android:onClick="split" android:id="@+id/split" android:layout_width="wrap_content" android:text="@string/split" android:layout_height="wrap_content"></Button>
+		 -->
+	</LinearLayout>
+	
+</RelativeLayout>

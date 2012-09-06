@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, HelloAndroid! I am a string resource!
+	</string>
+	<string name="app_name">Hello, Android</string>
+	<string name="hit">Hit</string>
+	<string name="split">Split</string>
+	<string name="insurance">Insurance</string>
+	<string name="doubleBtnText">Double</string>
+
+	<string name="blackjack">Blackjack</string>
+	<style name="CodeFont">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:typeface">monospace</item>
+		<item name="android:textSize">20sp</item>
+	</style>
+	<style name="PlayerName">
+		<item name="android:textColor">#FFFFFF</item>
+	</style>
+	<style name="Money">
+		<item name="android:textColor">#00FF00</item>
+		<item name="android:textSize">12sp</item>
+	</style>
+	<style name="OutcomeWin">
+		<!-- <item name="android:textColor">#00FF00</item> -->
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">12sp</item>
+	</style>
+	<style name="OutcomeLose">
+		<!-- <item name="android:textColor">#FF0000</item> -->
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">12sp</item>
+	</style>
+	<string name="player1">Player 1</string>
+	<string name="player2">Player 2</string>
+	<string name="player3">Player 3</string>
+	<string name="player4">Player 4</string>
+	<string name="dealer">Dealer</string>
+	<string name="bet">Bet</string>
+	<string name="defaultMoney">( $1,000.00 )</string>
+	<string name="join">Join</string>
+	<string name="sit">Sit</string>
+	<string name="stand">Stand</string>
+	<string name="leave">Leave</string>
+
+	<string name="bet_prompt">Bet</string>
+	<string-array name="bet_array">
+		<item>$20</item>
+		<item>$40</item>
+		<item>$60</item>
+		<item>$80</item>
+		<item>$100</item>
+		<item>$120</item>
+		<item>$140</item>
+		<item>$200</item>
+	</string-array>
+		<string name="deal">Deal</string>
+</resources>
