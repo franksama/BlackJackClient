@@ -1,4 +1,4 @@
-SportMingles
+BlackJackClient
 ============
 
-Android application for SportMingles
+My first Android application that connects to the BlackJack Distributed Server.
